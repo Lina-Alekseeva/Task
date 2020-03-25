@@ -28,11 +28,13 @@ public class Main {
                         System.out.println("Введите страну отправителя");
                         String SenderCountry = scanner.nextLine( );
                         System.out.println("Введите вес продукта");
+                        scanner.nextDouble( );
                         double Weight = scanner.nextDouble( );
                         scanner.nextLine( );
                         System.out.println("Введите штрихкод продукта");
+                        scanner.nextDouble( );
                         double Barcode = scanner.nextDouble( );
-                        Product product = new Product(NameProduct,RecipientCountry, SenderCountry, Weight,Barcode );
+                        Product product = new Product(NameProduct,RecipientCountry,SenderCountry,Weight,Barcode);
                         products[i] = product;
                         i++;
                     }
@@ -49,11 +51,12 @@ public class Main {
                         System.out.println("Введите ФИО руководителя группы");
                         String fioSupervisor = scanner.nextLine( );
                         System.out.println("Введите номер группы");
+                        scanner.nextDouble( );
                         double GroupNumber = scanner.nextDouble( );
                         scanner.nextLine( );
                         System.out.println("Введите стаж работы");
                         scanner.nextDouble( );
-                        Acceptor acceptor = new Acceptor(fio, address, fioSupervisor, GroupNumber);
+                        Acceptor acceptor = new Acceptor(fio,address,fioSupervisor,GroupNumber);
                         acceptors[j] = acceptor;
                         j++;
                     }
@@ -62,7 +65,7 @@ public class Main {
                 case "Вывести информацию о товаре":
                     System.out.println("Введите номер товара до " + (i - 1));
                     k = scanner.nextInt( );
-                    if (k > j - 1) {
+                    if (k > i - 1) {
                         System.out.println("Неверный номер");
                         continue;
                     }
@@ -72,7 +75,7 @@ public class Main {
                 case "Вывести информацию о приёмщике":
                     System.out.println("Введите номер приёмщика до " + (j - 1));
                     k = scanner.nextInt( );
-                    if (k > i - 1) {
+                    if (k > j - 1) {
                         System.out.println("Неверный номер");
                         continue;
                     }
