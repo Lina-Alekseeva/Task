@@ -61,7 +61,6 @@ public class Main {
                         j++;
                     }
                     break;
-
                 case "Вывести информацию о товаре":
                     System.out.println("Введите номер товара до " + (i - 1));
                     k = scanner.nextInt( );
@@ -71,7 +70,6 @@ public class Main {
                     }
                     System.out.println(products[k].getInfo( ));
                     break;
-
                 case "Вывести информацию о приёмщике":
                     System.out.println("Введите номер приёмщика до " + (j - 1));
                     k = scanner.nextInt( );
